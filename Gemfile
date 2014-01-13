@@ -43,3 +43,10 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use grape
+gem 'grape'
+gem 'grape-rabl'
+
+# Use happymapper
+gem 'happymapper'
