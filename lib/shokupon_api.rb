@@ -6,7 +6,7 @@ class ShokuponAPI < Grape::API
     # ex) http://localhost:3000/s
     prefix "s"
 
-    # API
+    # API version
     # ex) http://localhost:3000/s/v1
     version 'v1', :using => :path
 
@@ -28,17 +28,6 @@ class ShokuponAPI < Grape::API
             else
                 response.rest[0..2]
             end
-        end
-
-        # ex) OK: http://localhost:3000/api/v1/users/1
-        # ex) NG: http://localhost:3000/api/v1/users/a
-        desc "return a user"
-        params do
-            requires :id, type: Integer
-            optional :name, type: String
-        end
-        get ':id' do
-            User.find(params[:id])
         end
     end
 end
