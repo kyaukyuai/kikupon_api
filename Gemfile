@@ -51,3 +51,6 @@ gem 'grape-rabl'
 
 # Use happymapper
 gem 'happymapper'
+
+gem 'rake',  :require => false
+gem 'rspec', :require => false
