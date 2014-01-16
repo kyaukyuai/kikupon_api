@@ -1,6 +1,13 @@
+require_relative "../app/models/gurunavi_response.rb"
+
 class ShokuponAPI < Grape::API
     format :json
     formatter :json, Grape::Formatter::Rabl
+
+    # constant value
+    GNAVI_URL              = "http://api.gnavi.co.jp/ver1/RestSearchAPI/"
+    KEY_ID                 = "1a44098f06ec9e3c42211d95e0b0284d"
+    INPUT_COORDINATES_MODE = "2"
 
     # API prefix
     # ex) http://localhost:3000/s
@@ -17,15 +24,16 @@ class ShokuponAPI < Grape::API
             requires :id, type: Integer, desc: "User id."
             requires :lat, type: Float, desc: "Latitude."
             requires :lng, type: Float, desc: "Longitude."
+            optional :range, type: Integer, default: "1"
         end
 
         get do
-            uri = URI.parse "http://api.gnavi.co.jp/ver1/RestSearchAPI/?keyid=1a44098f06ec9e3c42211d95e0b0284d&latitude=" + "%3.6f" % params[:lat] + "&longitude=" + "%3.6f" % params[:lng] + "&range=3&input_coordinates_mode=2"
+            uri = URI.parse GNAVI_URL + "?keyid=" + KEY_ID + "&latitude=" + "%3.6f" % params[:lat] + "&longitude=" + "%3.6f" % params[:lng] + "&range=" + params[:range].to_s + "&input_coordinates_mode=" + INPUT_COORDINATES_MODE
             res = Net::HTTP.get uri
-            response = GurunaviResponse.parse(Net::HTTP.get uri)
+            response = Gurunavi::Response.parse(Net::HTTP.get uri)
             if response.blank? or response.rest.blank?
             else
-                response.rest[0..2]
+                response.rest
             end
         end
     end
