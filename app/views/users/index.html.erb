@@ -1,0 +1,61 @@
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Fb</th>
+      <th>Tw</th>
+      <th>Sex</th>
+      <th>Birthday</th>
+      <th>Pref</th>
+      <th>Drink flag</th>
+      <th>Love genres</th>
+      <th>Dis genres</th>
+      <th>Morning amt min</th>
+      <th>Morning amt max</th>
+      <th>Morning amt avg</th>
+      <th>Lunch amt min</th>
+      <th>Lunch amt max</th>
+      <th>Lunch amt avg</th>
+      <th>Dinner amt min</th>
+      <th>Dinner amt max</th>
+      <th>Dinner amt avg</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.user_id %></td>
+        <td><%= user.fb_id %></td>
+        <td><%= user.tw_id %></td>
+        <td><%= user.sex %></td>
+        <td><%= user.birthday %></td>
+        <td><%= user.pref %></td>
+        <td><%= user.drink_flag %></td>
+        <td><%= user.love_genres %></td>
+        <td><%= user.dis_genres %></td>
+        <td><%= user.morning_amt_min %></td>
+        <td><%= user.morning_amt_max %></td>
+        <td><%= user.morning_amt_avg %></td>
+        <td><%= user.lunch_amt_min %></td>
+        <td><%= user.lunch_amt_max %></td>
+        <td><%= user.lunch_amt_avg %></td>
+        <td><%= user.dinner_amt_min %></td>
+        <td><%= user.dinner_amt_max %></td>
+        <td><%= user.dinner_amt_avg %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
