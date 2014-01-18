@@ -28,6 +28,7 @@ class ShokuponAPI < Grape::API
         end
 
         get do
+            puts GNAVI_URL + "?keyid=" + KEY_ID + "&latitude=" + "%3.6f" % params[:lat] + "&longitude=" + "%3.6f" % params[:lng] + "&range=" + params[:range].to_s + "&input_coordinates_mode=" + INPUT_COORDINATES_MODE
             uri = URI.parse GNAVI_URL + "?keyid=" + KEY_ID + "&latitude=" + "%3.6f" % params[:lat] + "&longitude=" + "%3.6f" % params[:lng] + "&range=" + params[:range].to_s + "&input_coordinates_mode=" + INPUT_COORDINATES_MODE
             res = Net::HTTP.get uri
             response = Gurunavi::Response.parse(Net::HTTP.get uri)
