@@ -22,5 +22,9 @@ module KikuponApi
  
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib)
+
+    # Autoload services
+    config.autoload_paths += %W(#{config.root}/app/services)
+    config.autoload_paths += %W(#{config.root}/app/services/scoring_logic)
   end
 end

@@ -55,6 +55,7 @@ gem 'happymapper'
 # Use rspec
 gem 'rake',  :require => false
 gem 'rspec', :require => false
+gem 'rspec-rails', :require => false
 
 # Use mongo DB
 gem 'mongo_mapper'
