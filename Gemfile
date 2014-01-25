@@ -61,3 +61,6 @@ gem 'rspec-rails', :require => false
 gem 'mongo_mapper'
 gem 'bson_ext' # eneble bson
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+
+# Use masque
+gem 'masque'
