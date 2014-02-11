@@ -49,8 +49,20 @@ end
 gem 'grape'
 gem 'grape-rabl'
 
+# Use nokogiri
+gem 'nokogiri'
 # Use happymapper
 gem 'happymapper'
 
+# Use rspec
 gem 'rake',  :require => false
 gem 'rspec', :require => false
+gem 'rspec-rails', :require => false
+
+# Use mongo DB
+gem 'mongo_mapper'
+gem 'bson_ext' # eneble bson
+gem 'mongoid', github: 'mongoid/mongoid'
+
+# Use masque
+gem 'masque'
