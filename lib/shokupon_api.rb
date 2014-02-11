@@ -26,7 +26,6 @@ class ShokuponAPI < Grape::API
       restaurants = RestaurantsGetter.get(params[:lat], params[:lng], params[:range])
       #recommender = Recommender.new(restaurants, User.find(params[:id]))
       recommender = Recommender.new(restaurants, User.new)
-      
       # recommender returns recommended restaurants Array
       return recommender.recommend
     end
