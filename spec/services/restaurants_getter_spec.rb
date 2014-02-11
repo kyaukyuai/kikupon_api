@@ -9,6 +9,18 @@ describe RestaurantsGetter do
     range = 1
     restaurants = RestaurantsGetter.get(lat, lng, range)
     expect(restaurants.size).to be >= 1
-    restaurants.each { |restaurant| expect(restaurant.tabelog_rating).to eq(1) }
+
+    shop_counter = 0
+    error_counter = 0
+    restaurants.each { |restaurant|
+      shop_counter += 1
+      if restaurant.tabelog_rating == -1
+        error_counter += 1
+      else
+        expect(restaurant.tabelog_rating).to be > 1.5
+        expect(restaurant.tabelog_rating).to be < 4.5
+      end
+    }
+    expect(error_counter/shop_counter).to be < 0.5
   end
 end

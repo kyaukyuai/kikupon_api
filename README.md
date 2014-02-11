@@ -10,4 +10,10 @@ kikupon_api
     git clone https://github.com/kikupon/kikupon_api.git  
     cd kikupon_api  
     bundle install --path vendor/bundle  
-    bundle exec rails server
+    bundle exec rails server  
+
+## middleware dependencies
+
+    mongo-server
+    qt
+    xquartz http://xquartz.macosforge.org/landing/
