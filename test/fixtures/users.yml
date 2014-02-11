@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  fb_id: MyString
+  tw_id: MyString
+  sex: false
+  birthday: 2014-01-18 00:08:09
+  pref: MyString
+  drink_flag: 1
+  love_genres: 
+  dis_genres: 
+  morning_amt_min: 1
+  morning_amt_max: 1
+  morning_amt_avg: 1
+  lunch_amt_min: 1
+  lunch_amt_max: 1
+  lunch_amt_avg: 1
+  dinner_amt_min: 1
+  dinner_amt_max: 1
+  dinner_amt_avg: 1
+
+two:
+  user_id: 1
+  fb_id: MyString
+  tw_id: MyString
+  sex: false
+  birthday: 2014-01-18 00:08:09
+  pref: MyString
+  drink_flag: 1
+  love_genres: 
+  dis_genres: 
+  morning_amt_min: 1
+  morning_amt_max: 1
+  morning_amt_avg: 1
+  lunch_amt_min: 1
+  lunch_amt_max: 1
+  lunch_amt_avg: 1
+  dinner_amt_min: 1
+  dinner_amt_max: 1
+  dinner_amt_avg: 1

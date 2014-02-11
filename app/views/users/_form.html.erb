@@ -1,0 +1,89 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fb_id %><br>
+    <%= f.text_field :fb_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tw_id %><br>
+    <%= f.text_field :tw_id %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.check_box :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %><br>
+    <%= f.datetime_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :pref %><br>
+    <%= f.text_field :pref %>
+  </div>
+  <div class="field">
+    <%= f.label :drink_flag %><br>
+    <%= f.number_field :drink_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :love_genres %><br>
+    <%= f.text_field :love_genres %>
+  </div>
+  <div class="field">
+    <%= f.label :dis_genres %><br>
+    <%= f.text_field :dis_genres %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_amt_min %><br>
+    <%= f.number_field :morning_amt_min %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_amt_max %><br>
+    <%= f.number_field :morning_amt_max %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_amt_avg %><br>
+    <%= f.number_field :morning_amt_avg %>
+  </div>
+  <div class="field">
+    <%= f.label :lunch_amt_min %><br>
+    <%= f.number_field :lunch_amt_min %>
+  </div>
+  <div class="field">
+    <%= f.label :lunch_amt_max %><br>
+    <%= f.number_field :lunch_amt_max %>
+  </div>
+  <div class="field">
+    <%= f.label :lunch_amt_avg %><br>
+    <%= f.number_field :lunch_amt_avg %>
+  </div>
+  <div class="field">
+    <%= f.label :dinner_amt_min %><br>
+    <%= f.number_field :dinner_amt_min %>
+  </div>
+  <div class="field">
+    <%= f.label :dinner_amt_max %><br>
+    <%= f.number_field :dinner_amt_max %>
+  </div>
+  <div class="field">
+    <%= f.label :dinner_amt_avg %><br>
+    <%= f.number_field :dinner_amt_avg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

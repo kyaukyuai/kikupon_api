@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.user_id %>
+</p>
+
+<p>
+  <strong>Fb:</strong>
+  <%= @user.fb_id %>
+</p>
+
+<p>
+  <strong>Tw:</strong>
+  <%= @user.tw_id %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @user.sex %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <strong>Pref:</strong>
+  <%= @user.pref %>
+</p>
+
+<p>
+  <strong>Drink flag:</strong>
+  <%= @user.drink_flag %>
+</p>
+
+<p>
+  <strong>Love genres:</strong>
+  <%= @user.love_genres %>
+</p>
+
+<p>
+  <strong>Dis genres:</strong>
+  <%= @user.dis_genres %>
+</p>
+
+<p>
+  <strong>Morning amt min:</strong>
+  <%= @user.morning_amt_min %>
+</p>
+
+<p>
+  <strong>Morning amt max:</strong>
+  <%= @user.morning_amt_max %>
+</p>
+
+<p>
+  <strong>Morning amt avg:</strong>
+  <%= @user.morning_amt_avg %>
+</p>
+
+<p>
+  <strong>Lunch amt min:</strong>
+  <%= @user.lunch_amt_min %>
+</p>
+
+<p>
+  <strong>Lunch amt max:</strong>
+  <%= @user.lunch_amt_max %>
+</p>
+
+<p>
+  <strong>Lunch amt avg:</strong>
+  <%= @user.lunch_amt_avg %>
+</p>
+
+<p>
+  <strong>Dinner amt min:</strong>
+  <%= @user.dinner_amt_min %>
+</p>
+
+<p>
+  <strong>Dinner amt max:</strong>
+  <%= @user.dinner_amt_max %>
+</p>
+
+<p>
+  <strong>Dinner amt avg:</strong>
+  <%= @user.dinner_amt_avg %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

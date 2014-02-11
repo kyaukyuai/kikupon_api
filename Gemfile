@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+#gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,5 +49,20 @@ end
 gem 'grape'
 gem 'grape-rabl'
 
+# Use nokogiri
+gem 'nokogiri'
 # Use happymapper
 gem 'happymapper'
+
+# Use rspec
+gem 'rake',  :require => false
+gem 'rspec', :require => false
+gem 'rspec-rails', :require => false
+
+# Use mongo DB
+gem 'mongo_mapper'
+gem 'bson_ext' # eneble bson
+gem 'mongoid', github: 'mongoid/mongoid'
+
+# Use masque
+gem 'masque'

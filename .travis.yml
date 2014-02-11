@@ -1,0 +1,10 @@
+bundler_args: --without development --path vendor/bundle
+script: "bundle exec rake spec"
+rvm:
+        - 2.0.0
+gemfile:
+        - Gemfile
+branches:
+        only:
+                - master
+                - develop
